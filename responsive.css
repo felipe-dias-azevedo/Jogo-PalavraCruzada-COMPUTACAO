@@ -1,0 +1,32 @@
+
+@media (max-width: 1250px) {
+    .grid-jogo {
+        grid-template-columns: repeat(20, 32px);
+        grid-template-rows: repeat(20, 32px);
+    }
+}
+@media (max-width: 1200px) {
+    .grid-jogo {
+        grid-template-columns: repeat(20, 30px);
+        grid-template-rows: repeat(20, 30px);
+    }
+}
+@media (max-width: 1100px) {
+    .grid-jogo {
+        grid-template-columns: repeat(20, 28px);
+        grid-template-rows: repeat(20, 28px);
+    }
+}
+
+@media (max-width: 950px) {
+    .grid-jogo {
+        grid-template-columns: repeat(20, 25px);
+        grid-template-rows: repeat(20, 25px);
+    }
+}
+@media (max-width: 850px) {
+    .grid-jogo {
+        grid-template-columns: repeat(20, 22px);
+        grid-template-rows: repeat(20, 22px);
+    }
+}

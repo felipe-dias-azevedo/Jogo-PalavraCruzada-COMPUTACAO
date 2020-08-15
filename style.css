@@ -7,7 +7,13 @@
 body {
     font-size: 24px;
     background-color: #f2f2f2;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+input,
+button,
+textarea {
+    font-family: 'Alata', sans-serif;
 }
 
 .container {
@@ -15,13 +21,64 @@ body {
     justify-content: space-around;
 }
 
-.box2 {
+div#modal {
+    background-color: rgba(0,0,0,0.93);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+}
+
+.iniciar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.iniciar button {
+    margin-top: 20px;
+    padding: 12px;
+    width: auto;
+    box-shadow: 0 0 1em black;
+    background-color: #0e0e0e;
+    border: #fff 0.1em solid;
+    color: #f2f2f2;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.8em;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.iniciar button:hover,
+.iniciar button:focus {
+    transform: scale(0.95);
+}
+.iniciar button:active {
+    transform: scale(0.9);
+}
+
+#modal footer {
+    position: fixed;
+    z-index: 1;
+    top: 93vh;
+    right: 0;
+    padding: 1.2em;
+    color: #f2f2f2;
+    font-size: 0.6em;
+}
+
+.box-points {
     height: 92vh;
     width: 33vw;
-    background-color: #1E93A8;
+    background-color: #48f;
     border: black 0.2em solid;
     margin-top: 4vh;
-    border-radius: 10%;
+    border-radius: 26px;
     box-shadow: 0 0 0.3em black;
 }
 
@@ -34,7 +91,7 @@ body {
     width: 60vw;
     background-color: #cccccc;
     border: black 0.2em solid;
-    border-radius: 3.5%;
+    border-radius: 26px;
     box-shadow: 0 0 0.3em black;
 }
 
@@ -48,9 +105,7 @@ body {
 }
 
 .vazio {
-    /*height: 30px;
-    width: 30px;*/
-    background-color: #f2f2f2;
+    background-color: #fff;
     border: grey 1px solid;
 }
 
@@ -58,35 +113,35 @@ body {
     background-color: #232323;
     color: #f2f2f2;
     text-align: center;
-    /*height: 35px;
-    width: 35px;*/
     border: white 2px solid;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: default;
 }
 
 .numberBOX:hover {
     transform: scale(1.2);
 }
 
-/*.input-jogo {
-    height: auto;
-}*/
 input {
-    /*height: 35px;
-    width: 35px;*/
     background-color: lightgrey;
     color: black;
     text-align: center;
     text-transform: uppercase;
     border: black 2px solid;
     font-size: 0.8em;
+    outline: 0;
 }
 
 input:hover {
-    background-color: blue;
+    background-color: #48f;
     color: white;
+}
+
+input:focus,
+input:active {
+    border: #36f 3px groove;
 }
 
 .placar {
@@ -105,7 +160,7 @@ input:hover {
 .div_resp {
     display: flex;
     flex-direction: column;
-    margin: 0.5%;
+    margin: 11%;
     width: 95%;
     height: 9%;
 }
@@ -131,7 +186,7 @@ input:hover {
     justify-content: space-between;
 }
 
-button {
+.box-points button {
     font-size: 0.6em;
     margin: 0.1em;
     height: 1.8em;
@@ -139,10 +194,18 @@ button {
     box-shadow: 0 0 0.3em black;
     background-color: #f2f2f2;
     border: grey 0.005em solid;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: 0;
+    transition: 0.1s;
 }
 
-button:hover {
+.box-points button:hover {
     color: #f2f2f2;
     background-color: #232323;
     border: white 0.01em solid;
+}
+
+.box-points button:active {
+    transform: scale(0.95);
 }
